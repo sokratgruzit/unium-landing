@@ -1,0 +1,183 @@
+{
+  "navigation": [
+    {
+      "id": 1,
+      "name": "features",
+      "route": "features"
+    },
+    {
+      "id": 2,
+      "name": "assets",
+      "route": "/menu2"
+    },
+    {
+      "id": 3,
+      "name": "reviews",
+      "route": "/menu3"
+    },
+    {
+      "id": 4,
+      "name": "faq",
+      "route": "/menu4"
+    },
+    {
+      "id": 5,
+      "name": "about",
+      "route": "/about"
+    }
+  ],
+  "currencySlider": [
+    {
+      "id": 1,
+      "name": "Ripple",
+      "ltlName": "xrp",
+      "price": 223.00,
+      "ltlPrice": 31.21,
+      "img": "rip.png"
+    },
+    {
+      "id": 2,
+      "name": "Ethereum",
+      "ltlName": "etc",
+      "price": 223.00,
+      "ltlPrice": 31.21,
+      "img": "eth.png"
+    },
+    {
+      "id": 3,
+      "name": "Litecoin",
+      "ltlName": "etc",
+      "price": 223.00,
+      "ltlPrice": 31.21,
+      "img": "lite.png"
+    },
+    {
+      "id": 4,
+      "name": "Bitcoin",
+      "ltlName": "etc",
+      "price": 3223.00,
+      "ltlPrice": 31.21,
+      "img": "bit.png"
+    },
+    {
+      "id": 5,
+      "name": "Ripple",
+      "ltlName": "xrp",
+      "price": 223.00,
+      "ltlPrice": 31.21,
+      "img": "rip.png"
+    },
+    {
+      "id": 6,
+      "name": "Ethereum",
+      "ltlName": "etc",
+      "price": 223.00,
+      "ltlPrice": 31.21,
+      "img": "eth.png"
+    },
+    {
+      "id": 7,
+      "name": "Litecoin",
+      "ltlName": "etc",
+      "price": 223.00,
+      "ltlPrice": 31.21,
+      "img": "lite.png"
+    },
+    {
+      "id": 8,
+      "name": "Bitcoin",
+      "ltlName": "etc",
+      "price": 3223.00,
+      "ltlPrice": 31.21,
+      "img": "bit.png"
+    }
+  ],
+  "imgContainer": [
+    {
+      "id": 1,
+      "img": "wall1.png",
+      "title": "Many Supported Currencies",
+      "text": "Supports Major Blockchains, Simple Payment Verification, Decentralized Architecture",
+      "url": "http://google.com/",
+      "btn": "try unium",
+      "imgPos": "left"
+    },
+    {
+      "id": 2,
+      "img": "wall2.png",
+      "title": "Instant Exchange <br/>with Cashback",
+      "text": "Swap 60+ crypto pairs anonymously and receive a cash back for exchange.",
+      "url": "http://google.com/",
+      "btn": "discover",
+      "imgPos": "right"
+    },
+    {
+      "id": 3,
+      "img": "wall3.png",
+      "title": "Buy crypto Instantly",
+      "text": "Buy Bitcoin, Ethereum, Ripple, Bitcoin Cash, Litecoin, and other top cryptos with your credit card easily. We accept USD, EUR, and your local currency worldwide.",
+      "url": "http://google.com/",
+      "btn": "buy crypto",
+      "imgPos": "left"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "text": "Blockchain technology is here to stay. now you can send crypto coins to any country using Unium App",
+      "name": "andrew"
+    },
+    {
+      "id": 2,
+      "text": "Excellent mobile wallet.Very user friendly and secure. Definitely worth checking out and experiencing",
+      "name": "brandon"
+    },
+    {
+      "id": 3,
+      "text": "It has all the tools you need. Moreover is a very dynamic tool that is constantly being updated and enhanced with features.",
+      "name": "robin"
+    },
+    {
+      "id": 4,
+      "text": "Blockchain technology is here to stay. now you can send crypto coins to any country using Unium App",
+      "name": "robin"
+    },
+    {
+      "id": 5,
+      "text": "Blockchain technology is here to stay. now you can send crypto coins to any country using Unium App",
+      "name": "andrew"
+    },
+    {
+      "id": 6,
+      "text": "Excellent mobile wallet.Very user friendly and secure. Definitely worth checking out and experiencing",
+      "name": "brandon"
+    },
+    {
+      "id": 7,
+      "text": "It has all the tools you need. Moreover is a very dynamic tool that is constantly being updated and enhanced with features.",
+      "name": "robin"
+    },
+    {
+      "id": 8,
+      "text": "Blockchain technology is here to stay. now you can send crypto coins to any country using Unium App",
+      "name": "robin"
+    }
+  ],
+  "faq": [
+    {
+      "id": 1,
+      "question": "How do I install Unium App?",
+      "answer": "The 12 words (your “seed” or secret recovery phrase) are your master seed that generates all your wallet’s addresses and private keys. In other words, with this secret phrase, ANYONE can access your wallet’s funds anytime and anywhere from Unium or another wallet. <br><br> For this reason, do not store your secret 12-word phrase in any digital format, such as a screenshot or picture on your phone, a document on your computer, USB drive, or in the cloud (e.g. Dropbox), an email, etc.<br> <br>Hackers can access digital files and information, but they can’t access an old-fashioned piece\nof paper!"
+    },
+    {
+      "id": 2,
+      "question": "Where are blockchain assets stored?",
+      "answer": "The 12 words (your “seed” or secret recovery phrase) are your master seed that generates all your wallet’s addresses and private keys. In other words, with this secret phrase, ANYONE can access your wallet’s funds anytime and anywhere from Unium or another wallet. <br><br> For this reason, do not store your secret 12-word phrase in any digital format, such as a screenshot or picture on your phone, a document on your computer, USB drive, or in the cloud (e.g. Dropbox), an email, etc.<br> <br>Hackers can access digital files and information, but they can’t access an old-fashioned piece\nof paper!"
+    },
+    {
+      "id": 3,
+      "question": "Where are blockchain assets stored?",
+      "answer": "The 12 words (your “seed” or secret recovery phrase) are your master seed that generates all your wallet’s addresses and private keys. In other words, with this secret phrase, ANYONE can access your wallet’s funds anytime and anywhere from Unium or another wallet. <br><br> For this reason, do not store your secret 12-word phrase in any digital format, such as a screenshot or picture on your phone, a document on your computer, USB drive, or in the cloud (e.g. Dropbox), an email, etc.<br> <br>Hackers can access digital files and information, but they can’t access an old-fashioned piece\nof paper!"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Ubuntu-Regular";
+    src: url('../font/Ubuntu-Regular.eot');
+    src: url("../font/Ubuntu-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../font/Ubuntu-Regular.svg#NotoSans-Regular") format("svg"),
+    url("../font/Ubuntu-Regular.ttf") format("truetype"),
+    url("../font/Ubuntu-Regular.woff") format("woff"),
+    url("../font/Ubuntu-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu-Medium";
+    src: url("../font/Ubuntu-Medium.eot");
+    src: url("../font/Ubuntu-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../font/Ubuntu-Medium.svg#NotoSans-Medium") format("svg"),
+    url("../font/Ubuntu-Medium.ttf") format("truetype"), url("../font/Ubuntu-Medium.woff") format("woff"),
+    url("../font/Ubuntu-Medium.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: "Ubuntu-Regular";
+    font-size: 13px;
+    color: rgba(255,255,255,.6);
+    text-decoration: none;
+    outline-color: none;
+    box-sizing: border-box;
+}
+html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+body {
+    margin: 0;
+    -webkit-text-size-adjust:100%;
+    -moz-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    text-size-adjust: 100%;
+    /*padding-bottom: 200vh;*/
+    background: #020B1D;
+    overflow: hidden;
+}
+ul,li,p,img,h1,h2,h3,h4,h5,h6,input,button,nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-weight: normal;
+}
+input , textarea {
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.regular {
+    font-family: "Ubuntu-Regular";
+}
+.medium {
+    font-family: "Ubuntu-Medium", "NotoSans-Medium";
+}
+.container{
+    width: 100%;
+    max-width: 1920px;
+    padding: 0px 375px;
+    margin: 0px auto;
+    display: flex;
+}
+.font-72{
+    font-size: 72px;
+    line-height: 80px;
+}
+.pT-140{
+    padding-top: 140px;
+}
+/*Laptop 1440*/
+@media (max-width: 1900px){
+    .container{
+        padding: 0px 135px;
+    }
+}
+/*Ipad Pro 1024*/
+@media (max-width: 1365px){
+    .container{
+        padding: 0px 75px;
+    }
+    .font-72 {
+        font-size: 46px;
+        line-height: 60px;
+    }
+    .pT-140 {
+        padding-top: 80px;
+    }
+}
+/*Ipad 768*/
+@media (max-width: 1023px){
+    .font-72 {
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .container {
+        padding: 0px 25px;
+    }
+    .pT-140 {
+        padding-top: 40px;
+    }
+}
+/*Mobile 320*/
+@media (max-width: 767px){
+    .container{
+        padding: 0px 15px;
+    }
+}
