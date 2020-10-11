@@ -1,6 +1,6 @@
 <template>
   <div id="main" class="outer" :class="firstAnimation ? 'animHead' : ''">
-    <video autoplay muted class="mainVideo">
+    <video autoplay muted loop class="mainVideo">
       <source src="@/assets/img/video_top.mp4" type="video/mp4">
     </video>
     <div class="inner container">
@@ -162,6 +162,7 @@ export default {
     height: 100vh;
     padding-top: 100px;
     position: relative;
+    overflow: hidden;
   }
   .container{
     height: 100%;
@@ -210,7 +211,7 @@ export default {
     border-radius: 6px;
     transition: .4s ease-in-out;
     background: #000000;
-    border: 2px solid #292929;
+    border: 1px solid #292929;
   }
   .btnContainer a:hover{
     border-color: #525252;

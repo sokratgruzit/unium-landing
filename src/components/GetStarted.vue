@@ -1,6 +1,6 @@
 <template>
   <div class="outer pT-140" data-aos="fade-up">
-    <video autoplay muted class="mainVideo">
+    <video autoplay muted loop class="mainVideo">
       <source src="@/assets/img/video_footer.mp4" type="video/mp4">
     </video>
     <div class="grad"></div>
@@ -154,7 +154,7 @@ export default {
     border-radius: 6px;
     transition: .4s ease-in-out;
     background: #000000;
-    border: 2px solid #292929;
+    border: 1px solid #292929;
   }
   .btnContainer a:hover{
     border-color: #525252;

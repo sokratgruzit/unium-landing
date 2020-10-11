@@ -12,7 +12,7 @@
               :key="nav.id"
               :to="nav.route"
               class="medium"
-              :class="activeLink == nav.id ? 'active' : ''"
+              :class="$store.state.activeMenu == nav.id ? 'active' : ''"
               @click.native="activeLinkFunc(nav.id)"
             >
               {{nav.title}}
