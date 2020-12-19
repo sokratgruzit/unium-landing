@@ -5,6 +5,7 @@
     <AboutCounter/>
     <Reviews :itemData="$store.state.reviews"/>
     <GetStarted/>
+    <Footer/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import AboutContent from '@/components/AboutContent.vue'
 import AboutCounter from '@/components/AboutCounter.vue'
 import Reviews from '@/components/Reviews.vue'
 import GetStarted from '@/components/GetStarted.vue'
+import Footer from '@/components/modules/Footer'
 
 export default {
   name: 'About',
@@ -22,7 +24,8 @@ export default {
     AboutContent,
     AboutCounter,
     Reviews,
-    GetStarted
+    GetStarted,
+    Footer
   }
 }
 </script>

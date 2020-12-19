@@ -12,6 +12,7 @@
     <Reviews :itemData="$store.state.reviews"/>
     <Faq :itemData="$store.state.faq"/>
     <GetStarted/>
+    <Footer/>
   </div>
 </template>
 
@@ -24,10 +25,12 @@ import SupportedAssets from '@/components/SupportedAssets.vue'
 import Reviews from '@/components/Reviews.vue'
 import Faq from '@/components/Faq.vue'
 import GetStarted from '@/components/GetStarted.vue'
+import Footer from '@/components/modules/Footer'
 
 export default {
   name: 'Home',
   components: {
+    Footer,
     MainContainer,
     AboutMain,
     ImgContent,

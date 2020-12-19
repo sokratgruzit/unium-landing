@@ -1,10 +1,11 @@
 <template>
-  <div :class="activeBurger ? 'activeBurger' : ''">
-    {{$store.state.activeMenu}}
+  <div :class="[activeBurger ? 'activeBurger' : '', $store.state.activeMenu !== 0 ? 'fixedMenu' : '']">
     <header :class="firstAnimation ? 'animHead' : ''">
       <router-link
         class="logo"
         to="/"
+        @click.native="scrollToTop"
+        v-smooth-scroll
       >
         <svg width="160" height="60" viewBox="0 0 160 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="160" height="60">
@@ -155,14 +156,19 @@ export default {
         this.activeLink = id
         this.$store.commit('setMenuStatus', id)
       }, 100)
-      console.log(id)
+    },
+    scrollToTop () {
+      window.scrollTo(0, 0)
+      setTimeout(() => {
+        this.$store.commit('setMenuStatus', 0)
+      }, 200)
     }
   },
   mounted () {
     this.mobileModeFunc()
     setTimeout(() => {
       this.firstAnimation = true
-      this.$store.commit('setMenuStatus', null)
+      this.$store.commit('setMenuStatus', 0)
     }, 500)
   },
   created () {
@@ -184,7 +190,7 @@ export default {
     opacity: 1;
   }
   header{
-    background: #020B1D;
+    background: transparent;
     height: 100px;
     display: flex;
     align-items: center;
@@ -194,6 +200,10 @@ export default {
     z-index: 100;
     top: 0px;
     left: 0px;
+    transition: .6s ease-in-out;
+  }
+  .fixedMenu header{
+    background: #020B1D;
   }
   nav{
       margin-left: 120px;

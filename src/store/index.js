@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    activeMenu: null,
+    activeMenu: 0,
     navMenu: items.navigation,
     currencySlider: items.currencySlider,
     imgContainer: items.imgContainer,

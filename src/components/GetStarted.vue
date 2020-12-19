@@ -137,6 +137,8 @@ export default {
   .txt{
     margin-top: 25px;
     margin-bottom: 65px;
+    font-size: 20px;
+    line-height: 28px;
   }
   .btnContainer{
     display: flex;
@@ -171,6 +173,10 @@ export default {
   }
   /*Ipad 768*/
   @media (max-width: 1023px){
+    .txt{
+      font-size: 16px;
+      line-height: 18px;
+    }
     .btnContainer a{
       height: 60px;
       padding: 0px 15px;

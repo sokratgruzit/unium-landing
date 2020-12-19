@@ -148,6 +148,11 @@ export default {
   }
   .navigationContainer div:hover:not(.swiper-button-disabled){
     background: #5594FF;
+    border-color: #5594FF;
+  }
+  .navigationContainer div:active{
+    background: #3271DC;
+    border-color: #3271DC;
   }
   /*Ipad Pro 1024*/
   @media (max-width: 1365px){

@@ -1,5 +1,5 @@
 <template>
-  <div id="main" class="outer" :class="firstAnimation ? 'animHead' : ''">
+  <div id="main" class="outer" :class="firstAnimation ? 'animHead' : ''" v-view="visibilityChanged">
     <video autoplay muted loop class="mainVideo">
       <source src="@/assets/img/video_top.mp4" type="video/mp4">
     </video>
@@ -107,6 +107,11 @@ export default {
     setTimeout(() => {
       this.firstAnimation = true
     }, 500)
+  },
+  methods: {
+    visibilityChanged () {
+      this.$store.commit('setMenuStatus', 0)
+    }
   }
 }
 </script>
