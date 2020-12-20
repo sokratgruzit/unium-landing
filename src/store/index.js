@@ -10,13 +10,18 @@ export default new Vuex.Store({
     currencySlider: items.currencySlider,
     imgContainer: items.imgContainer,
     reviews: items.reviews,
-    faq: items.faq
+    faq: items.faq,
+    privacy: items.privacy,
+    activePrivacy: false
   },
   getters: {
   },
   mutations: {
     setMenuStatus (state, data) {
       state.activeMenu = data
+    },
+    setPrivacyPopup (state, status) {
+      state.activePrivacy = status
     }
   },
   actions: {
