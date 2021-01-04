@@ -3,22 +3,23 @@
     <swiper
       ref="mySwiper"
       :options="swiperOptions"
+      v-if="cryptoData"
     >
       <swiper-slide
-        v-for="slide in $store.state.currencySlider"
+        v-for="slide in cryptoData"
         :key="slide.id"
       >
         <div class="item">
           <div class="inner">
-            <img :src="require('@/assets/img/currency/bit.png')" alt="">
+            <img :src="slide.logo_url" alt="">
             <div class="descr">
               <div class="top">
-                <p class="medium">Ripple</p>
-                <p class="medium">$223.00</p>
+                <p class="medium">{{slide.name}}</p>
+                <p class="medium">${{parseFloat(slide.price).toFixed(2)}}</p>
               </div>
               <div class="bottom">
-                <p class="medium">xrp</p>
-                <p class="medium">31.21</p>
+                <p class="medium">{{slide.currency}}</p>
+                <p class="medium">{{parseFloat(slide.high).toFixed(2)}}</p>
               </div>
             </div>
           </div>
@@ -30,6 +31,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'CurrencySlider',
   data () {
@@ -43,7 +45,8 @@ export default {
         autoplay: {
           delay: 2000
         }
-      }
+      },
+      cryptoData: false
     }
   },
   computed: {
@@ -54,7 +57,10 @@ export default {
   mounted () {
     setTimeout(() => {
       this.firstAnimation = true
-    }, 500)
+    }, 1000)
+    axios
+      .get('https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD')
+      .then(response => (this.cryptoData = response.data))
   }
 }
 </script>
@@ -93,6 +99,7 @@ export default {
   }
   .inner img{
     margin-right: 10px;
+    height: 40px;
   }
   .descr .top p{
     color: #fff;

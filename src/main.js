@@ -11,9 +11,11 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import checkView from 'vue-check-view'
 import VueSmoothScroll from 'vue2-smooth-scroll'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 Vue.use(checkView)
-
+Vue.use(VueAxios, axios)
 AOS.init()
 
 Vue.use(VueAwesomeSwiper)
