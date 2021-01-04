@@ -1,3 +1,3 @@
-// module.exports = {
-//   publicPath: '/unium-landing/'
-// }
+module.exports = {
+  publicPath: '/unium-landing/'
+}
