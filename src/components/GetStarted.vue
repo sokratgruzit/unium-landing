@@ -6,7 +6,7 @@
     <div class="grad"></div>
     <div class="container">
       <h3 class="bold font-72">Get Started Now</h3>
-      <p class="txt">D21 app is now available from iOS and Android app stores.</p>
+      <p class="txt">Unium app is now available from iOS and Android app stores.</p>
       <div class="btnContainer">
         <a href="##" class="medium">
           <svg width="160" height="41" viewBox="0 0 160 41" fill="none" xmlns="http://www.w3.org/2000/svg">
