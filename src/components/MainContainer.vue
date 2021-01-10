@@ -6,7 +6,7 @@
     <div class="inner container">
       <div class="left">
         <h1 class="medium">Secure <br> Crypto <br> Wallet</h1>
-        <p>Manage your Bitcoin, Ethereum, XRP, Litecoin,XLM and over 300 other coins and tokens.</p>
+        <p>Manage your Bitcoin, Ethereum, XRP, Litecoin, XLM and over 300 other coins and tokens.</p>
         <div class="btnContainer">
           <a href="##" class="medium">
             <svg width="160" height="41" viewBox="0 0 160 41" fill="none" xmlns="http://www.w3.org/2000/svg">
