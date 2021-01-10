@@ -31,3 +31,4 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
