@@ -17,7 +17,6 @@ import VueAxios from 'vue-axios'
 Vue.use(checkView)
 Vue.use(VueAxios, axios)
 AOS.init()
-axios.defaults.baseURL = 'api'
 Vue.use(VueAwesomeSwiper)
 Swiper.use([Navigation, Pagination])
 Vue.config.productionTip = false
