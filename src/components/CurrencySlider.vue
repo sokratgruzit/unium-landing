@@ -69,10 +69,7 @@ export default {
       this.firstAnimation = true
     }, 1000)
     axios
-      .get('https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD', {
-        headers: {
-        }
-      })
+      .get('https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD')
       .then(response => (this.cryptoData = response.data))
   }
 }
