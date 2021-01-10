@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   name: 'CurrencySlider',
   data () {
@@ -54,16 +54,26 @@ export default {
       return this.$refs.mySwiper.$swiper
     }
   },
+  beforeMount () {
+    this.getName()
+  },
+  methods: {
+    async getName () {
+      const res = await fetch('https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD')
+      const data = await res.json()
+      this.cryptoData = data
+    }
+  },
   mounted () {
     setTimeout(() => {
       this.firstAnimation = true
     }, 1000)
-    axios
-      .get('https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD', {
-        headers: {
-        }
-      })
-      .then(response => (this.cryptoData = response.data))
+    // axios
+    //   .get('https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD', {
+    //     headers: {
+    //     }
+    //   })
+    //   .then(response => (this.cryptoData = response.data))
   }
 }
 </script>
