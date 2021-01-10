@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   name: 'CurrencySlider',
   data () {
@@ -57,22 +57,28 @@ export default {
   // beforeMount () {
   //   this.getName()
   // },
-  // methods: {
-  //   async getName () {
-  //     const res = await fetch('https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD')
-  //     const data = await res.json()
-  //     this.cryptoData = data
-  //   }
-  // },
+  methods: {
+    // async getName () {
+    //   const res = await fetch('https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD')
+    //   const data = await res.json()
+    //   this.cryptoData = data
+    // }
+    testFunc () {
+    }
+  },
   mounted () {
     setTimeout(() => {
       this.firstAnimation = true
     }, 1000)
-    axios
-      .get('https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD')
-      .then(response => (this.cryptoData = response.data))
+    const url = ['https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD']
+    const request = url.map(u => fetch(u))
+    Promise.all(request).then(responses => Promise.all(responses.map(r => r.json()))).then(response => (this.cryptoData = response[0]))
+    console.log(this.cryptoData)
   }
 }
+// axios
+//   .get('https://api.nomics.com/v1/currencies/ticker?key=fb1a5f1e05127cfca111dcebba2ef81a&ids=BTC,ETH,XRP&interval=1d&convert=USD')
+//   .then(response => (this.cryptoData = response.data))
 </script>
 <style scoped>
   .swiper-slide{
