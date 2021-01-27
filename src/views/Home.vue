@@ -1,6 +1,8 @@
 <template>
   <div>
     <MainContainer/>
+    <Video/>
+    <CurrencySlider/>
     <AboutMain/>
     <ImgContent
       v-for="data in $store.state.imgContainer"
@@ -26,6 +28,8 @@ import Reviews from '@/components/Reviews.vue'
 import Faq from '@/components/Faq.vue'
 import GetStarted from '@/components/GetStarted.vue'
 import Footer from '@/components/modules/Footer'
+import Video from '@/components/Video'
+import CurrencySlider from '@/components/CurrencySlider'
 
 export default {
   name: 'Home',
@@ -38,7 +42,9 @@ export default {
     SupportedAssets,
     Reviews,
     Faq,
-    GetStarted
+    GetStarted,
+    Video,
+    CurrencySlider
   }
 }
 </script>

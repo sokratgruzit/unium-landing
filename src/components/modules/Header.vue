@@ -34,6 +34,14 @@
           {{nav.title}}
         </router-link>
       </nav>
+      <div class="videoBtnContainer" @click="openVideo">
+        <div class="videoBtn">
+          <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 6L-4.89399e-07 11.1962L-3.51373e-08 0.803847L9 6Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="ttl"><span>Watch the Video</span></div>
+      </div>
       <div class="downloadBtnContainer" v-if="!mobileMode">
         <a href="##" class="dwnlBtn medium"><span class="medium">download now</span></a>
       </div>
@@ -142,6 +150,9 @@ export default {
         this.mobileMode = true
       }
     },
+    openVideo () {
+      this.$store.commit('setVideo', true)
+    },
     myEventHandler (e) {
       this.mobileModeFunc()
     },
@@ -180,6 +191,52 @@ export default {
 }
 </script>
 <style scoped>
+  .videoBtnContainer .ttl{
+    font-size: 13px;
+    opacity: .65;
+    text-transform: uppercase;
+    transition: .6s ease-in-out;
+    overflow: hidden;
+  }
+  .videoBtnContainer .ttl span{
+    transition: .6s ease-in-out;
+    transform: translateY(120%);
+    display: flex;
+  }
+  header.animHead .videoBtnContainer .ttl span{
+    transform: translateY(0%);
+    transition-delay: .6s;
+  }
+  .videoBtn{
+    height: 48px;
+    width: 48px;
+    background: rgba(73,223,143,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: .6s ease-in-out;
+  }
+  .videoBtnContainer:hover .videoBtn{
+    transform: scale(1.15);
+    background: #397EF4;
+  }
+  .videoBtnContainer:hover .ttl{
+    opacity: 1;
+  }
+  .videoBtnContainer{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+    transition: .6s ease-in-out;
+    opacity: 0;
+  }
+  header.animHead .videoBtnContainer{
+    opacity: 1;
+    transition-delay: .6s;
+  }
   .logo{
     transition: .4s ease-in-out;
     transform: translateY(5px);
@@ -255,7 +312,7 @@ export default {
   }
   .downloadBtnContainer{
     display: flex;
-    margin-left: auto;
+    margin-left: 50px;
   }
   .dwnlBtn{
     transition: .4s ease-in-out;
@@ -353,7 +410,7 @@ export default {
       padding: 0px 16px;
     }
     .burger{
-      margin-left: auto;
+      margin-left: 10px;
       margin-top: 5px;
       height: 32px;
       width: 32px;
@@ -412,6 +469,13 @@ export default {
       height: 48px;
       padding: 0px 30px;
       margin-top: 20px;
+    }
+    .videoBtnContainer .ttl{
+      display: none;
+    }
+    .videoBtn{
+      width: 35px;
+      height: 35px;
     }
   }
 </style>

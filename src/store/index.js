@@ -12,11 +12,15 @@ export default new Vuex.Store({
     reviews: items.reviews,
     faq: items.faq,
     privacy: items.privacy,
-    activePrivacy: false
+    activePrivacy: false,
+    video: false
   },
   getters: {
   },
   mutations: {
+    setVideo (state, data) {
+      state.video = data
+    },
     setMenuStatus (state, data) {
       state.activeMenu = data
     },

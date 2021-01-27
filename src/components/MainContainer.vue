@@ -84,20 +84,18 @@
           </a>
         </div>
       </div>
-      <img src="@/assets/img/mobileImg.png" class="mobileBg" alt="bg">
+      <div class="mobileBg">
+        <img src="@/assets/img/1.png" alt="bg">
+        <img src="@/assets/img/2.png" alt="bg">
+      </div>
     </div>
-    <CurrencySlider/>
   </div>
 </template>
 
 <script>
-import CurrencySlider from '@/components/CurrencySlider.vue'
 
 export default {
   name: 'MainContainer',
-  components: {
-    CurrencySlider
-  },
   data () {
     return {
       firstAnimation: false
@@ -120,14 +118,30 @@ export default {
     position: absolute;
     right: 175px;
     top: -70px;
+    width: 36%;
     height: 90%;
     z-index: 2;
-    transition: .4s ease-in-out;
+  }
+  .mobileBg img:first-child{
+    opacity: 0;
+    transition-delay: .4s;
+    transform: translateY(-10px);
+  }
+  .mobileBg img:last-child{
     opacity: 0;
     transition-delay: .4s;
     transform: translateY(10px);
   }
-  .animHead .mobileBg{
+  .mobileBg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    object-fit: contain;
+    transition: .4s ease-in-out;
+  }
+  .animHead .mobileBg img{
     transform: translateY(0px);
     opacity: 1;
   }
@@ -239,6 +253,7 @@ export default {
     .mobileBg{
       top: -20px;
       right: 15px;
+      width: 50%;
     }
     .left p{
       font-size: 20px;
@@ -303,6 +318,7 @@ export default {
       top: 0%;
       right: 0px;
       height: 43%;
+      width: 80%;
     }
   }
 </style>
